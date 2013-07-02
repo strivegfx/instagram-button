@@ -1,0 +1,29 @@
+@import "compass/css3";
+
+.wrapper{
+	margin: 100px;
+}
+
+
+.instagram-button{
+	@include transition(padding 0.25s ease, transform 0.25s ease);
+	//@include transition();
+	display: block;
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	background-color: white;
+	background-image: url(http://placekitten.com/200/200);
+	background-repeat: no-repeat;
+	background-position: center center;
+	border: 1px solid gray;
+	//@include transform-origin(center center);
+	@include transform(translate(0));
+	@include border-radius(3px);
+	@include box-shadow(0 0 10px 0 rgba(black, 0.4));
+
+	&:hover{
+		padding: 15px 15px 50px 15px;
+		@include transform(translate(-5px, -32px));
+	}
+}

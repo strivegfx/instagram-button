@@ -1,0 +1,40 @@
+/* line 3, ../sass/main.scss */
+.wrapper {
+  margin: 100px; }
+
+/* line 8, ../sass/main.scss */
+.instagram-button {
+  -webkit-transition: padding 0.25s ease, -webkit-transform 0.25s ease;
+  -moz-transition: padding 0.25s ease, -moz-transform 0.25s ease;
+  -o-transition: padding 0.25s ease, -o-transform 0.25s ease;
+  transition: padding 0.25s ease, transform 0.25s ease;
+  display: block;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  background-color: white;
+  background-image: url(http://placekitten.com/200/200);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 1px solid gray;
+  -webkit-transform: translate(0);
+  -moz-transform: translate(0);
+  -ms-transform: translate(0);
+  -o-transform: translate(0);
+  transform: translate(0);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4); }
+  /* line 25, ../sass/main.scss */
+  .instagram-button:hover {
+    padding: 15px 15px 50px 15px;
+    -webkit-transform: translate(-5px, -32px);
+    -moz-transform: translate(-5px, -32px);
+    -ms-transform: translate(-5px, -32px);
+    -o-transform: translate(-5px, -32px);
+    transform: translate(-5px, -32px); }
