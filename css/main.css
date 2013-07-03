@@ -5,13 +5,21 @@
   clear: both; }
 
 /* line 11, ../sass/main.scss */
+body {
+  background-color: #e4e4e4; }
+
+/* line 15, ../sass/main.scss */
 .wrapper {
   padding: 0;
   margin: 100px;
   width: 1000px;
-  background-color: f2f2f2; }
+  background-color: #f2f2f2;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  border-bottom: 2px solid #dfdfdf;
+  border-left: 2px solid #dfdfdf; }
 
-/* line 18, ../sass/main.scss */
+/* line 26, ../sass/main.scss */
 .instagram-button {
   -webkit-transition: padding 0.15s ease, margin 0.15s ease;
   -moz-transition: padding 0.15s ease, margin 0.15s ease;
@@ -45,7 +53,7 @@
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4); }
-  /* line 39, ../sass/main.scss */
+  /* line 47, ../sass/main.scss */
   .instagram-button:before, .instagram-button:after {
     -webkit-transition: opacity 0.15s ease;
     -moz-transition: opacity 0.15s ease;
@@ -59,19 +67,19 @@
     left: 0;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0; }
-  /* line 50, ../sass/main.scss */
+  /* line 58, ../sass/main.scss */
   .instagram-button:before {
     content: "world";
     bottom: 0; }
-  /* line 55, ../sass/main.scss */
+  /* line 63, ../sass/main.scss */
   .instagram-button:after {
     content: "hello";
     top: 0; }
-  /* line 60, ../sass/main.scss */
+  /* line 68, ../sass/main.scss */
   .instagram-button:hover {
     padding: 35px 15px 35px 15px;
     margin: 25px 45px 25px 45px; }
-    /* line 64, ../sass/main.scss */
+    /* line 72, ../sass/main.scss */
     .instagram-button:hover:before, .instagram-button:hover:after {
       -webkit-transition: opacity 0.15s ease;
       -webkit-transition-delay: 0.15s;
@@ -80,3 +88,11 @@
       transition: opacity 0.15s ease 0.15s;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1; }
+
+/* line 79, ../sass/main.scss */
+.divider {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2px solid #dfdfdf;
+  float: left; }

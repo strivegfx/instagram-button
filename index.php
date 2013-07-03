@@ -27,11 +27,18 @@
 			(function(){
 
 				var $html = '',
-					$i = null;
+					$i = null,
+					$boxNum = 9;
 
-				for($i = 0; $i < 10; $i++){
+				for($i = 1; $i < $boxNum - 1; $i++){
 
 					$html += '<a class="instagram-button" style="background-image: url(http://placekitten.com/200/200)"></a>';
+
+					if($i % 3 === 0 && $i !== $boxNum){
+
+						$html += '<div class="divider"></div>';
+
+					}
 
 				}
 
