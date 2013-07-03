@@ -1,29 +1,69 @@
 @import "compass/css3";
 
-.wrapper{
-	margin: 100px;
+$ani-spd: 0.15s;
+
+.clear-fix:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
+.wrapper{
+	padding: 0;
+	margin: 100px;
+	width: 1000px;
+	background-color: f2f2f2;
+}
 
 .instagram-button{
-	@include transition(padding 0.25s ease, transform 0.25s ease);
-	//@include transition();
+	@include transition(padding $ani-spd ease, margin $ani-spd ease);
+	position: relative;
 	display: block;
+	float: left;
 	width: 200px;
 	height: 200px;
 	padding: 10px;
+	margin: 50px;
+	color: gray;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	text-align: center;
 	background-color: white;
 	background-image: url(http://placekitten.com/200/200);
 	background-repeat: no-repeat;
 	background-position: center center;
-	border: 1px solid gray;
-	//@include transform-origin(center center);
 	@include transform(translate(0));
-	@include border-radius(3px);
+	@include border-radius(2px);
 	@include box-shadow(0 0 10px 0 rgba(black, 0.4));
 
+	&:before, &:after{
+		@include transition(opacity $ani-spd ease); // no delay (mouse leave)
+		z-index: 1;
+		position: absolute;
+		display: block;
+		margin: 10px 0 10px 0;
+		width: 100%;
+		left: 0;
+		@include opacity(0);
+	}
+
+	&:before{
+		content: "world";
+		bottom: 0;
+	}
+
+	&:after{
+		content: "hello";
+		top: 0;
+	}
+
 	&:hover{
-		padding: 15px 15px 50px 15px;
-		@include transform(translate(-5px, -32px));
+		padding: 35px 15px 35px 15px;
+		margin: 25px 45px 25px 45px;
+
+		&:before, &:after{
+			@include transition(opacity $ani-spd ease $ani-spd); // slight delay (mouse enter)
+			@include opacity(1);
+		}
 	}
 }
